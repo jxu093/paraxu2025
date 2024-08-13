@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xu-Parago Wedding 2025</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body, html {
             height: 100%;
@@ -24,41 +25,40 @@
     </style>
 </head>
 <body>
-    <img src="savethedatechoosexu.png" alt="Centered Image" class="centered-image">
-
-    <div id="countdowndiv">
-        Time remaining: <span id="countdown">xxxd xh xxm xxs</span>
-    </div>
-
+    <img src="savethedatexus.png" alt="Centered Image" class="centered-image">
+    <!-- <div id="countdowndiv">
+        Countdown to "I do": <span id="countdown">xxxd xh xxm xxs</span>
+    </div> -->
+    <p><a href="https://maps.app.goo.gl/thhpQvNzuZMvDYAG6">Paliku Gardens at Kualoa Ranch</a></p>
+    <p>More details coming soon!</p>
     <script>
         // Set the date we're counting down to
         var countDownDate = new Date("Sep 18, 2025 15:30:00").getTime();
         
         // Update the count down every 1 second
         var x = setInterval(function() {
+            // Get today's date and time
+            var now = new Date().getTime();
         
-          // Get today's date and time
-          var now = new Date().getTime();
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
         
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the result in the element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
         
-          // Display the result in the element with id="countdown"
-          document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-        
-          // If the count down is finished, write some text
-          if (distance < 0) {
+            // If the count down is finished, write some text
+            if (distance < 0) {
             clearInterval(x);
             document.getElementById("countdown").innerHTML = "EXPIRED";
-          }
+            }
         }, 1000);
-        </script>
+    </script>
 </body>
 </html>
