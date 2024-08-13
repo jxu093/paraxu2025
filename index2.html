@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save The Date</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+        
+  .save-the-date-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #fff;
+  }
+
+  .middle {
+    width: 1%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .left-image, .right-image {
+    width: 47%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .left-image {
+    background-image: url('images/pic1.jpg');
+  }
+  
+  .right-image {
+    background-image: url('images/pic2.jpg');
+  }
+  
+  .info-card {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    height: 55%;
+    border: 5px solid white;
+    color: #fff;
+    text-align: center;
+    background-color: #8a95a4;
+    padding: 20px;
+    width: 20%;
+    font-family: "Platypi", serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.6em;
+    border-radius: 1px;
+  }
+
+  .info-card .date {
+      font-size: 30px;
+  }
+</style>
+</head>
+<body>
+
+<div class="save-the-date-container">
+  <div class="left-image"></div>
+  <div class="middle"></div>
+  <div class="right-image"></div>
+  <div class="info-card">
+    <p>PLEASE SAVE OUR DATE</p>
+    <h1>The Xus</h1>
+    <p class="date">09<br>18<br>2025</p>
+    <p>Pallika Gardens at Kualoa Ranch</p>
+  </div>
+</div>
+
+</body>
+</html>
