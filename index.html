@@ -6,6 +6,27 @@
     <title>Xu-Parago Wedding 2025</title>
     <link rel="icon" href="favicon.ico?">
     <style>
+        @font-face {
+            font-family: 'romantic couple';
+            src: url('fonts/Romantic Couple Script.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'hatton medium';
+            src: url('fonts/hatton-font-family/PP Hatton Medium 500.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'hatton medium light';
+            src: url('fonts/hatton-font-family/PP Hatton Ultralight 200.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'eb garamond';
+            src: url('fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'eb garamond';
+            src: url('fonts/EB_Garamond/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+            font-style: italic;
+        }
         body, html {
             height: 100%;
             margin: 0;
@@ -13,52 +34,58 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f0f0f0;
+            color: white;
         }
-        .centered-image {
-            max-width: 100%;
-            max-height: 80%;
+        a {
+            color: white;
+            text-decoration: none;
         }
-        #countdowndiv {
-            max-height:10%;
+        html {
+            background-image: url('images/seatedwide.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        p {
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        #topspace {
+            height: 15%;
+        }
+        #bottomspace {
+            height: 10%;
+        }
+        #savethedatebox {
+            font: 3.8rem 'romantic couple';
+            text-shadow: black 0 1.5px;
+            flex: 1
+        }
+        #datebox {
+            font: 4rem 'hatton medium light';
+            text-shadow: black 0 1px;
+        }
+        #xubox {
+            font: 1.3rem 'eb garamond';
+        }
+        #locationbox {
+            font: italic 1.3rem 'eb garamond';
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            html {
+                background-image: url('images/seatedvertical.jpg');
+            }
         }
     </style>
 </head>
 <body>
-    <img src="images/savethedatexusemmy.png" alt="Centered Image" class="centered-image">
-    <!-- <div id="countdowndiv">
-        Countdown to "I do": <span id="countdown">xxxd xh xxm xxs</span>
-    </div> -->
-    <p><a href="https://maps.app.goo.gl/thhpQvNzuZMvDYAG6">Paliku Gardens at Kualoa Ranch</a></p>
-    <p>More details coming soon!</p>
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Sep 18, 2025 15:30:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-            // Get today's date and time
-            var now = new Date().getTime();
-        
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-        
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-            // Display the result in the element with id="countdown"
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-        
-            // If the count down is finished, write some text
-            if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
+    <p id="topspace"></p>
+    <p id="savethedatebox">Save the Date</p>
+    <p id="datebox">09.18.25</p>
+    <p id="xubox">The Xu's</p>
+    <p id="locationbox"><a href="https://maps.app.goo.gl/thhpQvNzuZMvDYAG6" target="_">Paliku Gardens at Kualoa Ranch</a></p>
+    <p id="bottomspace"></p>
 </body>
 </html>
